@@ -1,0 +1,126 @@
+﻿@page
+@model SymptomerWebApi.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Alder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Køn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].RegionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Nyser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Hoster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Feber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Muskelømhed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Diarre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Opkast)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Hovedpine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Halsonde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Stakåndethed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Udmattet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Sansetab)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Symptomer[0].Andet)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Symptomer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Køn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nyser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hoster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Muskelømhed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diarre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opkast)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hovedpine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Halsonde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stakåndethed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Udmattet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sansetab)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Andet)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
